@@ -72,6 +72,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine($"Capacity:{numList.Capacity}");
 
             //TODO: Populate the List with 50 random numbers between 0 and 50 you will need a method for this            
+            Console.WriteLine("List Populated Below");
             Populater(numList);
 
             //TODO: Print the new capacity
@@ -105,6 +106,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("Evens Only!!");
 
             OddKiller(numList);
+            NumberPrinter(numList);
             
             Console.WriteLine("------------------");
 
@@ -138,7 +140,7 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numList)
         {
-            //NOT WORKING
+
             for (int i = numList.Count - 1; i >= 0; i--)
             {
                 if (numList[i] % 2 != 0)
@@ -147,7 +149,6 @@ namespace CollectionsMasterConsoleUI
                 }
                 //var evens = numberList.Where(x => x%2 != 0);
 
-                NumberPrinter(numList);
             }
 
         }
@@ -185,8 +186,10 @@ namespace CollectionsMasterConsoleUI
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = rng.Next(0, 50);
+                numbers[i] = rng.Next(0, 51);
             }
+            Console.WriteLine("Array Populated Below");
+            NumberPrinter(numbers);
         }
 
         private static void ReverseArray(int[] array)
